@@ -27,10 +27,11 @@ const upload = multer({ storage: storage });
 // const nodemailer = require('nodemailer');
 // const crypto = require('crypto');
 
-app.use(cors({
-  origin: ['http://localhost:5173', 'http://prosi2lapak.wuaze.com','http://napak.wuaze.com','https://prosi.galileobimbel.com'], 
-  credentials: true // Allow credentials to be sent
-}));
+app.use(cors(//{
+  // origin: ['http://localhost:5173','https://hosting-prosi.vercel.app/', 'http://prosi2lapak.wuaze.com','http://napak.wuaze.com','https://prosi.galileobimbel.com'], 
+  // credentials: true // Allow credentials to be sent
+//}
+));
 
 app.use((req, res, next) => {
   res.setHeader('Access-Control-Allow-Origin', 'https://prosi.galileobimbel.com'); // Izinkan domain frontend Anda
